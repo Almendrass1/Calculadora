@@ -1,22 +1,22 @@
 import java.util.Scanner;
 
-public class Calculadora {
+public class Calculadora{
     public static void main(String[] args) {
-
         System.out.println("Bienvenido a la calculadora");
         System.out.print("Ingrese el primer número: ");
-        double num1 = new Scanner.nextDouble();
+        double num1 = new Scanner(System.in).nextDouble();
 
         System.out.print("Ingrese el segundo número: ");
-        double num2 = scanner.nextDouble();
+        double num2 = new Scanner(System.in).nextDouble();
 
-        System.out.println("Seleccione una operación:");
-        System.out.println("1. Suma");
-        System.out.println("2. Resta");
-        System.out.println("3. Multiplicación");
-        System.out.println("4. División");
-        System.out.print("Ingrese su elección (1-4): ");
-        int opcion = new Scanner.nextInt();
+        System.out.println("""
+                            Seleccione una operación:
+                            1. Suma
+                            2. Resta
+                            3. Multiplicación
+                            4. División""");
+
+        int opcion = new Scanner(System.in).nextInt();
 
         double resultado;
         switch (opcion) {
@@ -37,11 +37,11 @@ public class Calculadora {
                     resultado = num1 / num2;
                     System.out.println("El resultado de la división es: " + resultado);
                 } else {
-                    System.out.println("Error: División por cero no está permitida.");
+                    System.out.println("Error: No se puede dividir entre 0.");
                 }
                 break;
             default:
-                System.out.println("Opción no válida. Por favor, intente de nuevo.");
+                System.out.println("Opción no válida.");
         }
     }
 }
