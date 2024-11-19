@@ -2,11 +2,10 @@ import java.util.Scanner;
 
 public class Calculadora {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
         System.out.println("Bienvenido a la calculadora");
         System.out.print("Ingrese el primer número: ");
-        double num1 = scanner.nextDouble();
+        double num1 = new Scanner.nextDouble();
 
         System.out.print("Ingrese el segundo número: ");
         double num2 = scanner.nextDouble();
@@ -17,7 +16,7 @@ public class Calculadora {
         System.out.println("3. Multiplicación");
         System.out.println("4. División");
         System.out.print("Ingrese su elección (1-4): ");
-        int opcion = scanner.nextInt();
+        int opcion = new Scanner.nextInt();
 
         double resultado;
         switch (opcion) {
@@ -44,7 +43,5 @@ public class Calculadora {
             default:
                 System.out.println("Opción no válida. Por favor, intente de nuevo.");
         }
-
-        scanner.close();
     }
 }
